@@ -1,0 +1,37 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "MYSERIA.NET backend ",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "**.test.js"
+    ]
+  },
+  "keywords": [
+    "myseria"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server-express": "^3.6.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "eslint": "^8.9.0",
+    "express": "^4.17.2",
+    "graphql": "^14.7.0",
+    "graphql-depth-limit": "^1.1.0",
+    "graphql-iso-date": "^3.6.1",
+    "graphql-validation-complexity": "^0.4.2",
+    "helmet": "^5.0.2",
+    "mongoose": "^5.13.14",
+    "mongoose-sequence": "^5.3.1",
+    "node-fetch": "^2.6.7",
+    "nodemon": "^2.0.15",
+    "prettier": "^2.5.1"
+  }
+}

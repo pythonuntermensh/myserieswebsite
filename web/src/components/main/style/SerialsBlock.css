@@ -1,0 +1,12 @@
+.field-bottom {
+    margin-top: 3em;
+}
+
+.field-img>img {
+    width: 200px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}

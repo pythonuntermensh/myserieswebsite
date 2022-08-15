@@ -1,0 +1,56 @@
+.main {
+    margin: 200px 0 0;
+}
+
+@media only screen and (max-width: 767px) {
+    .main {
+        margin-top: 0;
+    }
+}
+
+.row {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    max-width: 72.5rem;
+}
+
+.row {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 72.5rem;
+}
+
+.row:after, .row:before {
+    content: " ";
+    display: table;
+}
+
+.row:after {
+    clear: both;
+}
+
+@media only screen and (max-width: 1025px) {
+    .columns {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media only screen and (min-width: 48em) {
+    .column, .columns {
+        position: relative;
+        padding-left: 0.625rem;
+        padding-right: 0.625rem;
+        float: left;
+    }
+}
+
+.main-content.white {
+    background: #fff;
+}
+
+

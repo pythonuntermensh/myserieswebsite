@@ -1,0 +1,580 @@
+button, html input[type=button], input[type=reset], input[type=submit] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+
+.layout-wrapper {
+    min-height: 100%;
+    height: auto!important;
+    position: relative;
+    margin: 0 auto -228px;
+    padding: 0 0 228px;
+    overflow-x: hidden;
+}
+
+header {
+    display: inline-block;
+    vertical-align: top;
+    position: fixed!important;
+    top: 0!important;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    height: 54px;
+    min-height: 54px;
+    background: #151515;
+    z-index: 25!important;
+}
+
+.img-bg, header {
+    display: block;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+@media only screen and (min-width: 1025px) {
+    header {
+        transition: transform .3s linear 0s;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    header {
+        min-height: 50px;
+    }
+}
+
+.row {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 72.5rem;
+}
+
+.small-12 {
+    width: 100%;
+}
+
+@media only screen and (min-width: 48em) {
+    .column, .columns {
+        position: relative;
+        padding-left: 0.625rem;
+        padding-right: 0.625rem;
+        float: left;
+    }
+}
+
+@media only screen and (max-width: 1025px) {
+    .columns {
+        padding: 0;
+    }
+}
+
+.l-header-content {
+    padding: 0 0 0 207px;
+    position: relative;
+}
+
+@media only screen and (max-width: 1025px) {
+    .l-header-content {
+        min-height: 54px;
+        padding: 0 0 0 64px;
+    }
+}  
+
+.hamburger {
+    width: 54px;
+    height: 54px;
+    padding: 18px 10px 17px;
+    outline: 0;
+    display: none;
+    z-index: 2;
+    border-right: 1px solid #242424;
+    padding: 17px 16px;
+    display: inline-block;
+    cursor: pointer;
+    transition-property: opacity,-webkit-filter;
+    transition-property: opacity,filter;
+    transition-property: opacity,filter,-webkit-filter;
+    transition-duration: .15s;
+    transition-timing-function: linear;
+    font: inherit;
+    color: inherit;
+    text-transform: none;
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    overflow: visible;
+}
+
+.hamburger {
+    width: 54px;
+    height: 54px;
+    padding: 18px 10px 17px;
+    outline: 0;
+    display: none;
+    z-index: 2;
+    border-right: 1px solid #242424;
+}
+
+.hamburger:hover {
+    opacity: 1;
+}
+
+@media only screen and (max-width: 1025px) {
+    .hamburger {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+}
+
+.hamburger-box {
+    width: 29px;
+    height: 19px;
+    display: inline-block;
+    position: relative;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1025px) {
+    .hamburger-box {
+        width: 32px;
+        margin-left: -1px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1025px) {
+    .hamburger-inner, .hamburger-inner:after, .hamburger-inner:before {
+        width: 32px;
+    }
+}
+
+.hamburger-inner {
+    display: block;
+    top: 50%;
+    margin-top: -1.5px;
+}
+
+.hamburger-inner:before {
+    top: -8px;
+}
+
+.hamburger-inner:after {
+    bottom: -8px;
+}
+
+.hamburger-inner:after, .hamburger-inner:before {
+    content: "";
+    display: block;
+}
+
+.hamburger-inner:before {
+    width: 29px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 0;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: .15s;
+    transition-timing-function: ease;
+}
+
+.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before {
+    width: 29px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 0;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: .15s;
+    transition-timing-function: ease;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1025px) {
+    .hamburger-inner, .hamburger-inner:after, .hamburger-inner:before {
+        width: 32px;
+    }
+}
+
+.hamburger--spin .hamburger-inner {
+    transition-duration: .22s;
+    transition-timing-function: cubic-bezier(.55,.055,.675,.19);
+}
+
+.hamburger--spin .hamburger-inner:after {
+    transition: bottom .1s ease-in .25s, transform .22s cubic-bezier(.55,.055,.675,.19);
+}
+
+.hamburger--spin .hamburger-inner:before {
+    transition: top .1s ease-in .25s, opacity .1s ease-in;
+}
+
+.hamburger--spin.is-active .hamburger-inner {
+    transform: rotate(225deg);
+    transition-delay: .12s;
+    transition-timing-function: cubic-bezier(.215,.61,.355,1);
+}
+
+.hamburger--spin.is-active .hamburger-inner:before {
+    top: 0;
+    opacity: 0;
+    transition: top .1s ease-out, opacity .1s ease-out .12s;
+}
+
+.hamburger--spin.is-active .hamburger-inner:after {
+    bottom: 0;
+    transform: rotate(
+-90deg
+);
+    transition: bottom .1s ease-out, transform .22s cubic-bezier(.215,.61,.355,1) .12s;
+}
+
+
+.logo {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+}
+
+.logo a {
+    display: block;
+    padding: 0;
+    line-height: 54px;
+    transition: all .1s ease 0s;
+}
+
+.logo img {
+    max-height: 37px;
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 180px;
+}
+
+@media only screen and (max-width: 1025px) {
+    .logo {
+        position: relative;
+        display: block;
+        float: left;
+    }
+}
+
+.top-nav {
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    position: relative;
+    z-index: 5;
+}
+
+@media only screen and (max-width: 1025px) {
+    .top-nav {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+    .top-nav ul>li>a {
+        font-size: 14px;
+    }
+}
+
+.nav-list {
+    position: relative;
+}
+
+.nav-list li {
+    margin-right: 23px;
+    padding: 0 8px;
+    display: inline-block;
+    vertical-align: top;
+    line-height: 54px;
+}
+
+.nav-list li a {
+    display: inline-block;
+    color: #ececec;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.2;
+    text-decoration: none;
+    transition: all .1s ease 0s;
+}
+
+.nav-list li a:hover{
+    outline: none!important;
+    color: #0083da;
+    font-weight: 400;
+}
+
+.block-search {
+    display: block;
+    position: absolute;
+    right: 111px;
+    left: 170px;
+    top: 0;
+    height: 54px;
+    background: transparent;
+}
+
+@media only screen and (max-width: 1025px) {
+    .block-search {
+        left: 230px;
+        right: 54px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .block-search {
+        left: 0;
+        height: 100%;
+    }
+}
+
+.search-container {
+    border-left: 1px solid #242424;
+    display: block;
+    position: absolute;
+    right: 0;
+    width: 110px;
+    height: 54px;
+    transition: all .2s linear 0s;
+}
+
+@media only screen and (max-width: 1025px) {
+    .search-container {
+        width: 106px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .search-container {
+        height: 100%;
+        width: 50px;
+    }
+}
+
+.search-container.focused {
+    width: 100%;
+    z-index: 8;
+}
+
+.wrap {
+    height: 100%;
+}
+
+.wrap form {
+    height: 100%;
+}
+
+.response-container {
+    display: block;
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    top: 100%;
+    left: 0;
+    right: -1px;
+    background: #efefef;
+    z-index: 1;
+    box-shadow: 0 0 48px rgb(0 0 0 / 59%);
+    transition: all .2s ease 0s;
+}
+
+
+.input-area {
+    display: block;
+    position: absolute;
+    width: 50px;
+    height: 54px;
+    padding: 0;
+    left: 0;
+    top: 0;
+    background: 0;
+    border: 0;
+    outline: 0;
+    z-index: 1;
+    font-size: 0;
+    text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+    .input-area {
+        height: 100%;
+        pointer-events: none;
+    }
+}
+
+.input-area span {
+    display: inline-block;
+    vertical-align: middle;
+    color: #565656;
+    font-size: 18px;
+}
+
+#search {
+    height: 54px;
+    padding: 0 18px 0 50px;
+    border: 0;
+    background: #151515;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1;
+    position: relative;
+}
+
+@media only screen and (max-width: 1025px) {
+    #search {
+        padding-right: 10px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    #search {
+        height: 100%;
+        padding: 0;
+    }
+
+    #search::placeholder {
+        color: transparent;
+    }
+
+    .search-container.focused #search {
+        background: #151515;
+        padding-left: 50px;
+    }
+
+    .search-container.focused .input-area {
+        pointer-events: visible;
+    }
+}
+
+.close-search {
+    display: block;
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    right: 0;
+    top: 0;
+    width: 50px;
+    height: 54px;
+    transition: all .2s linear 0s;
+    cursor: pointer;
+}
+
+.search-container:hover .icon-search {
+    outline: none!important;
+    color: #0083da;
+    font-weight: 400;
+}
+
+@media only screen and (max-width: 767px) {
+    .close-search {
+        height: 50px;
+        z-index: 5;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .search-container:hover #search {
+        background-color: #000;
+    }
+}
+
+.box-login {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.login-wget {
+    width: 111px;
+    border-left: 1px solid #242424;
+    border-right: 1px solid #242424;
+}
+
+@media only screen and (max-width: 1025px) {
+    .login-wget {
+        border-right: 0;
+        width: 54px;
+    }
+}
+
+.info {
+    display: block;
+    width: 100%;
+    height: 54px;
+    text-align: center;
+    font-size: 0;
+    cursor: pointer;
+    transition: all .1s ease 0s;
+}
+
+
+
+.info::after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: .1%;
+    height: 100%;
+    margin-left: -.1%;
+}
+
+.help {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.icon-login {
+    display: inline-block;
+    vertical-align: middle;
+    color: #555;
+    font-size: 19px;
+    margin-right: 14px;
+    transition: all .1s ease 0s;
+}
+
+@media only screen and (max-width: 1025px){
+    .icon-login {
+        margin: 0;
+    }
+}
+
+.text {
+    display: inline-block;
+    vertical-align: middle;
+    color: #969696;
+    font-size: 15px;
+    font-weight: 400;
+    transition: all .1s ease 0s;
+}
+
+.login-wget:hover .icon-login {
+    outline: none!important;
+    color: #0083da;
+    font-weight: 400;
+}
+
+.login-wget:hover .text {
+    outline: none!important;
+    color: #0083da;
+    font-weight: 400;
+}
+
+@media only screen and (max-width: 1025px) {
+    .text {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .login-wget:hover .info {
+        background-color: #000;
+    }
+}
+

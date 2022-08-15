@@ -1,0 +1,23 @@
+.background-img{
+    background: url("../static/background-img.webp") center top no-repeat rgb(8, 8, 8);
+    display: block;
+    position: fixed;
+    z-index: -1;
+    top: 32px;
+    left: 0;
+    right: 0;
+    height: 100%;
+}
+
+.layout-wrapper {
+    min-height: 100%;
+    height: auto!important;
+    position: relative;
+    margin: 0 auto -228px;
+    padding: 0 0 228px;
+    overflow-x: hidden;
+}
+
+.children-wrapper {
+    margin-top: 54px;
+}
