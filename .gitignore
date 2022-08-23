@@ -1,9 +1,9 @@
 /api/.env
 /api/.eslintrc
 /api/.prettierrc
+/api/node_modules
 
 /web/node_modules
 /web/.env
 
-/videoUploader/node_modules
-/videoUploader/.env
+.DS_Store
